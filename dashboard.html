@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prince of Wales School Management</title>
+        <link rel="stylesheet" href="style/dashboard.css">
+        <link rel="stylesheet" href="style/dashboard_resp.css">
+        <!-- <link rel="stylesheet" href="style/dark_mode.css"> -->
+        <link rel="icon" href="icons/Picture1.png">
+    </head>
+
+    <body>
+        <!-- Navigation Panel (Block by default) -->
+        <section class="side-nav" id="myNav">
+            <div class="side-links">
+                <a href="dashboard.html" id="logo" onclick="returnMain()" class="element-box">
+                    <img src="icons/logo.png" alt="" width="50">
+                </a>
+                <a href="pupil.html" onclick="pupilAdminPage()" class="element-box" id="active-element">
+                    <img src="icons/student.png" alt="">
+                    <p>Pupil</p>
+                </a>
+                <a href="staff.html" onclick="staffAdminPage()" class="element-box">
+                    <img src="icons/006-teaching.png" alt="">
+                    <p>Staff</p>
+                </a>
+                <a href="classroom.html" class="element-box" id="active-element" onclick="classroomAdminPage()">
+                    <img src="icons/teaching_bd.png" alt="">
+                    <p>Class Room</p>
+                </a>
+                <a href="inbox.html" class="element-box" id="active-element">
+                    <img src="icons/inbox.png" alt="">
+                </a>
+            </div>
+            <div class="lower-area">
+                <a href="register_form.html" target="_blank" class="element-box">
+                    <img src="icons/settings.png" alt="">
+                    <!-- <a href="#">Logout</a> -->
+                </a>
+                <a href="#" class="element-box" style="margin-bottom: 200px;">
+                    <img src="icons/user-2.png" alt="" style="border: 1px solid darkolivegreen; border-radius: 50%;">
+                    <!-- <a href="#">Profile</a> -->
+                </a>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <main id="main">
+            <nav class="nav-bar">
+                <h1>Dashboard</h1>
+                <button class="open-btn" onclick="openNav()">&#9776</button>
+            </nav>
+            <section class="school-detail">
+                <div class="detail-box">
+                    <div class="detail-text">
+                        <h3>Pupils</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="detail-img">
+                        <img src="icons/student.png" alt="">
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-text">
+                        <h3>Staffs</h3>
+                        <p>100</p>
+                    </div>
+                    <div class="detail-img">
+                        <img src="icons/user.png" alt="">
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-text">
+                        <h3>Class rooms</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="detail-img">
+                        <img src="icons/teaching_bd.png" alt="">
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-text">
+                        <h3>Organisations</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="detail-img">
+                        <img src="icons/education.png" alt="">
+                    </div>
+                </div>
+                <div class="detail-box">
+                    <div class="detail-text">
+                        <h3>Buildings</h3>
+                        <p>0</p>
+                    </div>
+                    <div class="detail-img">
+                        <img src="icons/store-building.png" alt="">
+                    </div>
+                </div>
+                <!-- <div class="detail-box" onclick="MainAddBtn()">
+                <div class="detail-text">
+                    <button id="mainAddBtn">Add</button>
+                </div>
+                <div class="detail-img">
+                    <img src="icons/icon_group.png" alt="">
+                     <p>+</p>
+                </div>
+            </div> -->
+            </section>
+
+            <sectiom class="extra">
+                <div class="extra-box">
+                    <div class="heading">
+                        <h2>Upcoming Events - 2024</h2>
+                        <button>
+                            <img src="icons/add.png" alt="">
+                            <p id="hint">Add event</p>
+                        </button>
+                    </div>
+                    <div class="list">
+                        <ul class="event_list">
+                            <li class="no-event-theme">
+                                <p id="no-event" style="text-align: center;">No event available</p>
+                            </li>
+                        </ul>
+                        <ul class="event_list" id="past">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">99th Foundation Day & Flag raising ceremony</h1>
+                                <p id="eventDate">April 6</p>
+                            </li>
+                            <li class="date">
+                                <p id="eventLocation">Prince of wales school compound</p>
+                                <p id="eventTime">10:00am</p>
+                            </li>
+                        </ul>
+                        <ul class="event_list" id="past">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">Annual sport meeting</h1>
+                                <p id="eventDate">April 6</p>
+                            </li>
+                            <li class="date">
+                                <p id="eventLocation">Prince of wales school compound</p>
+                                <p id="eventTime">12:00pm</p>
+                            </li>
+                        </ul>
+                        <ul class="event_list" id="past">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">Old school after sport's Jam</h1>
+                                <p id="eventDate">April 6</p>
+                            </li>
+                            <li class="date" id="past">
+                                <p id="eventLocation">Prince of wales school compound</p>
+                                <p id="eventTime">Immeditaely after sport</p>
+                            </li>
+                        </ul>
+                        <ul class="event_list" id="past">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">99th Annivesary thanksgiving service</h1>
+                                <p id="eventDate">April 21</p>
+                            </li>
+                            <li class="date">
+                                <!-- <p id="eventLocation">Match From mountain cut to POW school</p> -->
+                                <p id="eventTime" style="flex: content;">2:00pm</p>
+                            </li>
+                        </ul>
+                        <!-- <div id="add"> -->
+                        <!-- <button>Add Event</button> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+                <div class="extra-box">
+                    <div class="heading">
+                        <h2>Notice Board</h2>
+                        <button>
+                            <img src="icons/add.png" alt="">
+                            <p id="hint">Add Notice</p>
+                        </button>
+                    </div>
+                    <div class="list">
+                        <ul class="event_list">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">CTA - Meeting</h1>
+                                <p id="eventDate">June 1</p>
+                            </li>
+                            <li class="date">
+                                <p id="eventLocation">POW Assembling Hall</p>
+                                <p id="eventTime">2:00pm</p>
+                            </li>
+                        </ul>
+                        <ul class="event_list">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">SSS Admission deadline</h1>
+                                <p id="eventDate">June 1</p>
+                            </li>
+                            <li class="date">
+                                <!-- <p id="eventLocation">POW Assembling Hall</p> -->
+                                <!-- <p id="eventTime">2:00pm</p> -->
+                            </li>
+                        </ul>
+                        <ul class="event_list">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">JSS Admission deadline</h1>
+                                <p id="eventDate">June 1</p>
+                            </li>
+                            <li class="date">
+                                <!-- <p id="eventLocation">POW Assembling Hall</p> -->
+                                <!-- <p id="eventTime">2:00pm</p> -->
+                            </li>
+                        </ul>
+                        <ul class="event_list">
+                            <li class="event-theme">
+                                <h1 id="eventTitle">Distribution Of Report Cards</h1>
+                                <p id="eventDate">June 1
+                            </li>
+                            <li class="date">
+                                <!-- <p id="eventLocation">POW Assembling Hall</p> -->
+                                <p id="eventTime">3:00pm</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- <div id="add"> -->
+                    <!-- <button>Add Notice</button> -->
+                    <!-- </div> -->
+                </div>
+                </div>
+                </div>
+            </sectiom>
+        </main>
+
+        <footer style="text-align: center; font-size: small;">
+            <p>&COPY; Prince of Wales School Kingtom 2024</p>
+        </footer>
+        <script src="script/dashboard.js"></script>
+    </body>
+
+</html>

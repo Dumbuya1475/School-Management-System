@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POW - pupils</title>
+        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="style/pupil.css">
+        <!-- <link rel="icon" href="image/logo.png"> -->
+        <!-- <link rel="stylesheet" href="css/dashboard.css"> -->
+    </head>
+
+    <body>
+        <!-- Navigation Panel (Hidden by default) -->
+        <section class="side-nav" id="myNav">
+            <div class="side-links">
+                <a href="dashboard.html" id="logo" onclick="returnMain()" class="element-box">
+                    <img src="icons/logo.png" alt="" width="50">
+                </a>
+                <a href="pupil.html" onclick="pupilAdminPage()" class="element-box" id="active-element">
+                    <img src="icons/student.png" alt="">
+                    <p>Pupil</p>
+                </a>
+                <a href="staff.html" onclick="staffAdminPage()" class="element-box">
+                    <img src="icons/006-teaching.png" alt="">
+                    <p>Staff</p>
+                </a>
+                <a href="classroom.html" class="element-box" id="active-element" onclick="classroomAdminPage()">
+                    <img src="icons/teaching_bd.png" alt="">
+                    <p>Class Room</p>
+                </a>
+                <a href="inbox.html" class="element-box" id="active-element">
+                    <img src="icons/inbox.png" alt="">
+                </a>
+            </div>
+            <div class="lower-area">
+                <a href="register_form.html" target="_blank" class="element-box">
+                    <img src="icons/settings.png" alt="">
+                    <!-- <a href="#">Logout</a> -->
+                </a>
+                <a href="#" class="element-box" style="margin-bottom: 200px;">
+                    <img src="icons/user-2.png" alt="" style="border: 1px solid darkolivegreen; border-radius: 50%;">
+                    <!-- <a href="#">Profile</a> -->
+                </a>
+            </div>
+        </section>
+
+        <main id="main">
+            <section class="page-heading">
+                <h3>Classroom</h3>
+                <div class="selection-heading">
+                    <p
+                        style="border: none; border-top: 1px solid darkolivegreen; border-bottom: 1px solid darkolivegreen; border-left: 1px solid darkolivegreen; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;">
+                        Filter:</p>
+                    <select name="studentCategory" id="studentCategory">
+                        <option value="allPupil">All Classroom</option>
+                        <option value="pincoded">Science Block</option>
+                        <option value="department">IDA Block</option>
+                        <option value="normal">Administrative Block</option>
+                    </select>
+                    <button><span style="margin-right: 5px; font-weight: bold; font-size: large;">+</span>Add new
+                        classroom</button>
+                </div>
+            </section>
+            <section class="pupil-table">
+                <div class="pupil-table-head">
+                    <button id="searchIcon">Search</button>
+                    <input type="search" name="searchPupil" id="searchPupil" placeholder="Search building or block">
+                </div>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr style="background-color: darkolivegreen; color: #eee;">
+                                <th style="padding: 10px;">No.</th>
+                                <th>Building/Block</th>
+                                <th>No. of classroom</th>
+                                <!-- <th>Action</th> -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr onclick="myFunc()">
+                                <td>1</td>
+                                <td>IDA</td>
+                                <td>20 - ClassRoom</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>Science Building</td>
+                                <td>12 - ClassRoom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pupil-panel-container">
+                        <div class="profile-area">
+                            <div class="profile-head">
+                                <img src="icons/icon_group.png" alt="" width="100">
+                                <h3 id="name">IDA</h3>
+                                <!-- <p id="category">HOD</p> -->
+                            </div>
+                            <div class="other-info-container">
+                                <div class="other-info-box">
+                                    <p>Donated by</p>
+                                    <p id="pa">OPWA</p>
+                                </div>
+                                <div class="other-info-box">
+                                    <!-- <p>Email</p> -->
+                                    <!-- <p>dumbuy</p> -->
+                                </div>
+                                <div class="other-info-box">
+                                    <!-- <p>Phone</p> -->
+                                    <!-- <p>+232000000</p> -->
+                                </div>
+                                <div class="other-info-box">
+                                    <p>Classrooms</p>
+                                    <p>20</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+            </section>
+        </main>
+<script src="script/pupil.js"></script>
+    </body>
+
+</html>

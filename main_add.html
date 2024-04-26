@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prince of Wales School Management</title>
+        <link rel="stylesheet" href="css/main_add.css">
+        <!-- <link rel="stylesheet" href="css/dashboard_resp.css"> -->
+        <link rel="stylesheet" href="css/dark_mode.css">
+        <link rel="icon" href="icons/Picture1.png">
+    </head>
+
+    <body>
+        <h3>Please select what you want to add</h3>
+        <div class="category">
+            <button id="addPupil" onclick="addPupilFun()">Pupil</button>
+            <button id="addStaff" onclick="addStaffFun()">Staff</button>
+            <button id="addOrganisation">Organisation</button>
+            <button id="addClassRoom">Class Room</button>
+        </div>
+        <div id="pupilSection" class="toggle-pupil-content">
+            <div class="input-field">
+                <input type="text" placeholder="Pupil First Name" id="stFirstName" required>
+                <input type="text" placeholder="Pupil Middle Name (optional)" id="stMiddleName" required>
+                <input type="text" placeholder="Pupil Last Name" id="stLastName" required>
+            </div>
+            <h3>Pupils Category</h3>
+            <div class="radio">
+                <label for="sp"><input type="radio" id="sp" name="select">Senior Prefect</label>
+                <label for="dsp_1"><input type="radio" id="dsp_1" name="select">Deputy Senior Prefect 1</label>
+                <label for="dsp_2"><input type="radio" id="dsp_2" name="select">Deputy Senior Prefect 2</label>
+                <label for="cp"><input type="radio" id="cp" name="select">Class Prefect</label>
+                <label for="nml"><input type="radio" id="nml" name="select">Normal</label>
+            </div>
+        </div>
+
+        <div id="staffSelection" class="toggle-staff-content">
+            <div class="input-field">
+                <input type="text" placeholder="Staff First Name" id="firstName">
+                <input type="text" placeholder="Staff Middle Name (optional)" id="middleName">
+                <input type="text" placeholder="Staff Last Name" id="lastName">
+            </div>
+            <h3>Pupils Category</h3>
+            <div class="radio">
+                <label for="st"><input type="radio" id="st" name="select">Senior Teacher</label>
+                <label for="bosser"><input type="radio" id="bosser" name="select">Bosser 1</label>
+                <label for="hod"><input type="radio" id="hod" name="select">H.O.D</label>
+                <label for="pc"><input type="radio" id="pc" name="select">Pin coded</label>
+                <label for="nmlt"><input type="radio" id="nmlt" name="select">Normal</label>
+            </div>
+        </div>
+        <button type="submit" id="sumitBtn" onclick="supmitInfo()">Submit</button>
+        <script src="js/dashboard.js"></script>
+    </body>
+
+</html>

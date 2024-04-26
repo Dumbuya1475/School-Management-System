@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>P.O.W Login</title>
+        <link rel="stylesheet" href="style/login.css">
+        <link rel="stylesheet" href="style/login_resp.css">
+        <link rel="icon" href="icons/Picture1.png">
+    </head>
+
+    <body>
+        <form action="">
+            <div class="form_body">
+                <div class="heading">
+                    <div class="text">
+                        <img src="icons/Picture1.png" alt="pow" width="100" height="auto">
+                        <h4>Hello!!!</h4>
+                        <h5>Be part of the Prince of Wales Community :)</h5>
+                        <p>Regester by completing the following information below</p>`
+                    </div>
+                    <div class="passport_pic_area">
+                        <!-- Use a button to trigger file input -->
+                        <button type="button" id="file-button">Add Passport Photo</button>
+                        <input type="file" id="profile-picture" name="profile-picture" accept="image/*"
+                            style="display: none;" onchange="previewImage()" required>
+                        <div id="preview" class="preview-container"></div>
+                    </div>
+                </div>
+
+                <!-- Container that contain all input box -->
+                <div class="input_container">
+                    <!-- <h3>registration form</h3> -->
+                    <div class="input_field">
+                        <label for="firstName">First Name <input type="text" placeholder="First Name" id="firstName"
+                                required></label>
+                        <label for="middleName">Middle Name <input type="text" placeholder="Middle Name" id="middleName"
+                                required></label>
+                        <label for="lastName">Last Name <input type="text" placeholder="Last Name" id="lastName"
+                                required></label>
+                        <label for="dob">Date of Birth <input type="date" placeholder="dob" id="dob" required></label>
+                        <label for="address">Address <input type="text" placeholder="Address" id="address"
+                                required></label>
+                        <label for="talPhone">Email <input type="email" placeholder="pow@gmail.com" id="email"
+                                required></label>
+                        <label for="talPhone">Phone <input type="number" placeholder="Phone" id="talPhone"
+                                required></label>
+                        <label for="idNum">ID Number <input type="number" placeholder="ID Number" id="idNum"
+                                required></label>
+                        <label for="school">Status
+                            <select>
+                                <option value="option1">Option 1</option>
+                                <option value="option2">Option 2</option>
+                                <option value="hideContent">Hide Content</option>
+                            </select>
+                            <select id="school" name="school" id="selectOption" onchange="handleSelection()" required>
+                                <option value="">Status</option>
+                                <option value="ahmadiyya_lungi">Currently elroled</option>
+                                <option value="sssGraduant">SSS Graduant</option>
+                                <option value="u/cGraduant">University/College graduant </option>
+                            </select>
+                        </label>
+
+                        <!-- Input for class category -->
+                        <label for="level">Category
+                            <select name="" id="level" id="selectOption" onchange="handleSelection()" required>
+                                <option value="jss">Jss</option>
+                                <option value="sss">SSS</option>
+                            </select>
+                        </label>
+                        <!-- Input for class category -->
+                        <label for="level">Register as
+                            <select name="" id="level" required>
+                                <option value="pupil">Pupil</option>
+                                <option value="admin">Admin</option>
+                                <option value="teacher" id="staffSelect">Staff</option>
+                                <option value="opwa">OPWA</option>
+                            </select>
+                        </label>
+
+                        <!-- Input for age -->
+                        <label for="ageRange">Select age
+                            <select name="" id="Age Range" required>
+                                <option value="range1">10 - 15</option>
+                                <option value="range2">16 - 18</option>
+                                <option value="range3">18 - 25</option>
+                                <option value="range4">25 - and above</option>
+                            </select>
+                        </label>
+
+                        <!-- Input for gender -->
+                        <label for="gender">Gender
+                            <select name="" id="gender" required>
+                                <option value="">None</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </label>
+
+                        <!-- Input for special talent -->
+                        <label for="">What specitl skill or talent do you have <input type="text"></label>
+
+                        <!-- Input for talent category -->
+                        <label for="talent">What category do your talent match
+                            <select name="" id="category" required>
+                                <option value="">None</option>
+                                <option value="art">Art and craft</option>
+                                <option value="design">Design</option>
+                                <option value="tech">Programming</option>
+                                <option value="wire">Electronic</option>
+                                <option value="thinking">Intelligent Thinking</option>
+                                <option value="thinking">Others</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <!-- Input for description or tought -->
+                    <div class="description">
+                        <label for="describe">Give a short description of how you plan to make use about your talent you
+                            talent in the future <textarea name="" id="describe" cols="30" rows="10"
+                                placeholder="Start Typing.........." required></textarea></label>
+                    </div>
+
+                    <!-- Terms and conditions checkbox -->
+                    <div class="terms">
+                        <input type="checkbox" required>
+                        <p>I agree to all <a href="">terms and conditions</a> of GIFTED</p>
+                    </div>
+
+                    <!-- Submit button -->
+                    <input type="submit" value="Submit">
+                </div>
+            </div>
+        </form>
+
+        <!-- Path to script (js) -->
+        <script src="script/dashboard.js"></script>
+    </body>
+
+</html>

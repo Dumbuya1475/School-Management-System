@@ -1,0 +1,18 @@
+#student-form {
+    margin: 1em;
+    padding: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: none; /* Initially hide the form */
+}
+
+#student-table th, #student-table td {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+}
+
+#user-info-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover; /* Maintain aspect ratio and fit within container */
+}

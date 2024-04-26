@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    max-width: 50%;
+}
+.category {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px;
+    margin: 20px;
+    width: max-content;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+}
+
+.category button {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: large;
+    transition: 0.2s ease;
+}
+
+.category button:hover {
+    color: #ddd;
+    background-color: darkolivegreen;
+}
+
+.toggle-pupil-content,
+.toggle-staff-content {
+    display: none;
+}
+.toggle-pupil-content h3,
+.toggle-staff-content h3 {
+    margin-top: 20px;
+}
+
+.toggle-pupil-content .input-field,
+.toggle-staff-content .input-field {
+    display: flex;
+    gap: 13px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.toggle-pupil-content .input-field input,
+.toggle-staff-content .input-field input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: large;
+    width: 370px;
+    outline-color:darkolivegreen;
+}
+
+.toggle-pupil-content .radio,
+.toggle-staff-content .radio {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.toggle-pupil-content .radio label,
+.toggle-staff-content .radio label {
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: default;
+}
+
+#sumitBtn {
+    padding: 10px;
+    background-color: darkolivegreen;
+    width: 100px;
+    font-weight: bold;
+    color: #ddd;
+    border-radius: 3px;
+    border: none;
+    font-size: large;
+    margin-top: 20px;
+}
+
+#sumitBtn:hover {
+    background-color: rgba(85, 107, 47, 0.911);
+}

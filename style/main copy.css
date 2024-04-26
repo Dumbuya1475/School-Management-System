@@ -1,0 +1,458 @@
+/* ********************************************************* */
+/* Basic styling */
+/* ********************************************************* */
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* ********************************************************* */
+/* Header */
+/* ********************************************************* */
+header {
+    background-color: #fff;
+    color: #000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul button {
+    padding: 5px;
+    width: 50px;
+    height: auto;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid darkolivegreen;
+    border-radius: 5px;
+    display: none;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /* position: fixed; */
+    /* top: 0; */
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: darkolivegreen;
+    font-size: larger;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    font-weight: 600;
+    color: #075d3a;
+    border-bottom: 1px solid #075d3a;
+}
+
+/* ********************************************************* */
+/* Navigation Panel */
+/* ********************************************************* */
+.nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.nav a {
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #f1f1f1;
+}
+
+.nav .close-btn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+#hero {
+    height: 60vh;
+    background: url("../image/school_bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-color: red; */
+}
+
+.bg-filter {
+    /* background-color: rgba(22, 22, 4, 0.700); */
+    backdrop-filter: blur(1px);
+    /* height: inherit; */
+    /* display: flex; */
+    /* justify-content: space-around; */
+    /* background-color: darkolivegreen; */
+    text-align: left;
+    /* align-items: center; */
+    color: #fff;
+    /* display: flex; */
+}
+
+.hero-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.hero-logo img {
+    background-color: #eee8;
+}
+
+.hero-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 200px;
+    width: 100%;
+}
+
+.hero-heading h1 {
+    width: 500px;
+    font-size: 48px;
+    font-weight: lighter;
+    color: #f9f1f8;
+    word-spacing: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-transform: uppercase;
+}
+
+.hero-heading h5 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: #f9f1f8;
+}
+
+.hero-heading p {
+    font-size: 20px;
+    color: #E5E7Eb;
+    margin-bottom: 20px;
+}
+
+.action-btn {
+    display: flex;
+    gap: 20px;
+}
+
+.action-btn #ContactUs {
+    display: flex;
+    font-size: large;
+    border: 2px solid darkolivegreen;
+    gap: 20px;
+    background-color: transparent;
+}
+
+.hero-heading a {
+    color: #eee;
+    text-decoration: none;
+    padding: 10px 20px;
+    width: fit-content;
+    background-color: darkolivegreen;
+    border: 1px solid #fff;
+    /* border-radius: 50px; */
+    font-size: large;
+}
+
+.hero-heading a:hover {
+    background-color: darkolivegreen;
+}
+
+/* *********************************************** */
+/* about section start */
+/* *********************************************** */
+section#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
+}
+
+.about-heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 500px;
+    margin: 30px 0;
+}
+
+.about-heading-container .about-heading {
+    color: darkolivegreen;
+    font-weight: bold;
+    font-size: 36px;
+    /* background-color: red; */
+}
+
+.about-img-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-img-container .img-box {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+    border-radius: 20px;
+}
+
+.about-img-container .img-box>img {
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 220px;
+}
+
+.description p {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    background-color: #3333;
+    padding: 10px;
+    max-width: 200px;
+}
+
+/* ***************************************************************** */
+/* About section end */
+/* ***************************************************************** */
+
+section.section-container {
+    background-image: url(../image/school_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+section#academics {
+    margin-top: 50px;
+}
+
+section#admissions .content,
+section#blog .content {
+    flex-direction: row-reverse;
+}
+
+section#admissions .filter,
+section#blog .filter {
+    background-color: #fff;
+}
+
+.section-container .filter {
+    backdrop-filter: blur(1px);
+    background-color: rgba(22, 22, 4, 0.700);
+    /* background-color: darkolivegreen; */
+    background-color: #fff;
+
+}
+
+.section-container .content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.section-container .section-heading-container {
+    width: 400px;
+    font-size: large;
+}
+
+.section-container h2 {
+    text-decoration-line: underline;
+    text-emphasis-style: dot;
+    font-size: 2.6rem;
+    color: darkolivegreen;
+    text-decoration-color: darkolivegreen;
+    text-emphasis-color: darkolivegreen;
+}
+
+section#academics h2,
+section#newsEevent h2 {}
+
+section#admissions h2,
+section#blog h2 {}
+
+.section-container p {}
+
+section#academics p,
+section#newsEevent a p {}
+
+.section-container p {
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+    color: #000;
+    /* background-color: #002b1a; */
+}
+
+.section-container a {
+    color: #fff;
+    text-decoration: none;
+    background-color: darkolivegreen;
+    padding: 10px 10px;
+    border-radius: 5px 20px 5px 20px;
+    font-size: large;
+    transition: 0.2s ease;
+    border: none;
+    font-size: large;
+    border-radius: 5px 20px 5px 20px;
+}
+
+.section-container a:hover {
+    background-color: rgb(116, 145, 67);
+    /* background-color: darkolivegreen; */
+    /* background-color: rgb(228, 255, 182); */
+    border-radius: 50pc;
+}
+
+section.section-container a:hover {
+    border-radius: 50px 50px 50px 0px;
+    padding: 10px 10px;
+    border-radius: 50px;
+
+}
+
+footer {
+    color: #fff;
+    background-color: darkolivegreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 40px;
+    line-height: 1.7;
+    border-top: 2px solid #fff;
+}
+
+footer #container {
+    padding: 50px;
+    color: #fff;
+    /* background-color: #000; */
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 100px;
+}
+
+footer #container ul li {
+    list-style: disc;
+    list-style-position: inside;
+}
+
+footer img {
+    width: 30px;
+}
+
+footer .heading-container img {
+    width: 50px;
+    background-color: #fff;
+}
+
+footer .heading-container {
+    margin-bottom: 20px;
+    color: #000;
+    color: #002b1a;
+}
+
+footer .copyright-area {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+    border-top: 2px solid #fff;
+}
+
+footer .copyright-area p {
+    margin-right: 20px;
+}
+
+footer a {
+    /* margin-right: 20px; */
+    color: #fff;
+}
+
+footer a:hover {
+    /* margin-right: 20px; */
+    color: #fff;
+    text-decoration: underline;
+}

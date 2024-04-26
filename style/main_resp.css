@@ -1,0 +1,173 @@
+/* 2. **Organize content logically:**
+- Use semantic HTML tags (e.g., `<h1>` for headings, `<p>` for paragraphs) to structure your content meaningfully. This aids accessibility and responsiveness.
+
+**CSS Styling:**
+
+1. **Base styles:**
+- Reset default styles with a CSS reset to create a consistent foundation. Consider frameworks like Normalize.css or using a starter template.
+2. **Fluid units:**
+- Use relative units like `em`, `rem`, or `vw` instead of fixed pixel values for flexible sizing across devices.
+3. **Media queries:**
+- Define different styles for different screen widths using media queries. Leverage `min-width` and `max-width` to target specific device ranges.
+```css */
+
+
+
+@media (min-width: 1024px) {
+  /* Styles for larger screens (laptops, desktops) */
+  /* header { text-align: center; } */
+  /* main { display: flex; } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* Styles for tablets */
+    header img {
+        width: 30px; /* Adjust height as needed */
+        margin-right: 10px;
+    }
+
+    nav ul button {
+        width: 50px;
+        padding: 0;
+        height: auto;
+        font-size: 30px;
+        font-weight: bold;
+        background-color: transparent;
+        border: 2px solid darkolivegreen;
+        border-radius: 10px;
+    }
+    
+    nav ul li {
+        display: none;
+    }
+
+    .bg-filter {
+        gap: 50px;
+        flex-direction: column-reverse;
+    }
+    }
+
+    .about-img-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .academics-content,
+    .admissions-content,
+    .news-content {
+        flex-direction: column;
+
+    .bg-filter .hero-heading h1 {
+        font-size: 5rem;
+        color: transparent;
+    }
+
+    .bg-filter .hero-heading h5 {
+        font-size: 3rem;
+    }
+
+    .bg-filter .hero-heading p {
+        font-size: 2rem;
+    }
+
+    .bg-filter .hero-heading {
+        text-align: center;
+        background: linear-gradient(to right, darkolivegreen, white, darkolivegreen);
+        -webkit-background-clip: text;
+    }
+
+    .bg-filter .hero-logo img {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+  /* Styles for small screens (phones) */    
+    header {
+        height: 50px;
+    }
+
+    header img {
+        width: 30px; /* Adjust height as needed */
+        margin-right: 10px;
+    }
+
+    nav ul button {
+        width: 40px;
+        padding: 0;
+        height: auto;
+        font-size: 20px;
+        font-weight: bold;
+        background-color: transparent;
+        border: 2px solid darkolivegreen;
+        color: darkolivegreen;
+        border-radius: 10px;
+    }
+    
+    nav ul li {
+        display: none;
+    }
+
+    .bg-filter,
+    #hero {
+        height: 80vh;
+    }
+
+    .bg-filter {
+        gap: 50px;
+        flex-direction: column-reverse;
+    }
+
+    .about-img-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bg-filter .hero-heading h1 {
+        font-size: 2.5rem;
+        color: transparent;
+    }
+
+    .bg-filter .hero-heading h5 {
+        font-size: 3rem;
+    }
+
+    .bg-filter .hero-heading p {
+        font-size: 2rem;
+    }
+
+    .bg-filter .hero-heading {
+        text-align: center;
+        background: linear-gradient(to right, darkolivegreen, white, darkolivegreen);
+        -webkit-background-clip: text;
+    }
+    
+    .bg-filter .hero-logo img {
+        display: none;
+    }
+
+    .about-img-container .img-box img {
+        /* width: 0px; */
+    }
+
+    .about-heading-container {
+        width: fit-content;
+        padding: 0;
+        margin: 0;
+    }
+
+    .academics-content,
+    .admissions-content,
+    .news-content {
+        flex-direction: column;
+        width: fit-content;
+    }
+
+    .academics-content .img-box img,
+    .admissions-content .img-box img,
+    .news-content .img-box img {
+        width: 350px;
+    }
+    selection .img-box img {
+        background-color: red;
+        width: 20px;
+    }
+}

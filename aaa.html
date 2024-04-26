@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince of Wales</title>
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\style_renspo.css">
+    <!-- <link rel="stylesheet" href="css\rensponsive.css"> -->
+    <link rel="stylesheet" href="css\style1.css">
+</head>
+<body>
+    <div class="hero" id="home">
+        <div class="bg-layer">
+            <div class="nav-panel">
+                <nav class="nav-content">
+                    <li><a href="#" id="active">POW</a></li>
+                    <li onclick="smoothScroll('about')"><a href="about_us.html">About Us</a></li>
+                    <li onclick="smoothScroll('project')"><a href="">Events</a></li>
+                    <li id="my_team"><a href="form.html">Admission</a></li>
+                    <li id="my_team"><a href="form.html">Login</a></li>
+                </nav>
+            </div>
+            <header> 
+                <div class="logo">
+                    POW
+                </div>             
+                <nav>
+                    <li><a href="#" id="active">home</a></li>
+                    <li onclick="smoothScroll('about')"><a href="about_us.html">About Us</a></li>
+                    <li onclick="smoothScroll('project')"><a href="">Events</a></li>
+                    <li onclick="smoothScroll('project')"><a href="">Blog & News</a></li>
+                </nav>
+                <div class="button">
+                    <button class="nav-toggle" onclick="toggleNavPanel()">☰</button>
+                </div>
+                <div class="action">
+                    <li id="my_team"><a href="form.html">Database</a></li>
+                    <li id="my_team"><a href="form.html">Admission</a></li>
+                    <li id="my_team"><a href="form.html">Login</a></li>
+                </div>
+            </header>
+            <div class="hello-text">
+                <h1 class="typing-animation">Prince of Wales School</h1>
+                <h2 class="typing-animation"></h2>
+                <h4><span id="title">Kingtom</span></h4>
+                <h6>Motto: FORWARD</h6>
+                <h6>Founded: 1925</h6>
+            </div>
+            <div class="contact-icon">
+            <div class="action">
+                <button id="read_more">Admission</button>
+                <button id="contact_me">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <div class="person">
+                <div class="detail">
+                    <p id="num">100</p>
+                    <p>classroom</p>
+                </div>
+                <img src="image/id.png" alt="">
+            </div>
+            <div class="person">
+                <div class="detail">
+                    <p id="num">1000</p>
+                    <p>Staffs</p>
+                </div>
+                <img src="image/id.png" alt="">
+            </div>
+            <div class="person">
+                <div class="detail">
+                    <p id="num">3000</p>
+                    <p>scholarship</p>
+                </div>
+                <img src="image/id.png" alt="">
+            </div>
+        </div>
+    </div>
+
+     <div class="contact-container">
+            <div class="contact-me" id="contact">
+                <div class="link-box">
+                    <h5>Follow Us</h5>
+                    <div class="links">
+                        <div class="link">
+                            <img src="image/icons8-linkedin-48.png" alt="">
+                            <a href="https://WWW.linkedin.com/in/mohamed-super-dumbuya-036034289" target="_blank" onclick="showConfirmation('LinkedIn')">Linkedin</a>
+                        </div>
+                        <div class="link">
+                            <img src="image/icons8-github-30.png" alt="">
+                            <a href="https://WWW.github.com/msdumbuya1475" target="_blank" onclick="showConfirmation('GitHub')">GitHub</a>
+                        </div>
+                        <div class="link">
+                            <img src="image/icons8-x-80.png" alt="">
+                            <a href="https://WWW.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-me" id="contact">
+                <div class="link-box">
+                    <h5>Get in touch</h5>
+                    <div class="links">
+                        <div class="link">
+                            <img src="image/icons8-whatsapp-48.png" alt="">
+                            <a href="https://wa.me/+23274523500" target="_blank" onclick="showConfirmation('WhatsApp')">WhatsApp</a>
+                        </div>
+                        <div class="link">
+                            <img src="image/icons8-linkedin-48.png" alt="">
+                            <a href="https://WWW.linkedin.com/in/mohamed-super-dumbuya-036034289" target="_blank" onclick="showConfirmation('LinkedIn')">Linkedin</a>
+                        </div>
+                        <!-- <div class="link">
+                            <img src="image/icons8-github-30.png" alt="">
+                            <a href="https://WWW.github.com/msdumbuya1475" target="_blank" onclick="showConfirmation('GitHub')">GitHub</a>
+                        </div> -->
+                        <!-- <div class="link">
+                            <img src="image/icons8-x-80.png" alt="">
+                            <a href="https://WWW.facebook.com/mohamed.sdumbuya.12?mibextid=ZbWKwL" target="_blank" onclick="showConfirmation('Facebook')">Facebook</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy:2023 Prince of Wales. All rights reserved.</p>
+            <p>Design by: Mohamed Super Dumbuya</p>
+        </footer>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>

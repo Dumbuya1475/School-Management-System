@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>School Management System</h1>
+    <button id="add-student">Add Student</button>
+
+    <div id="student-form" style="display: none;">
+        <h2>Add Student Details</h2>
+        <label for="admission-number">Admission Number (Starts from 1000):</label>
+        <input type="number" id="admission-number" min="1000" required> <br>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter student name" required>
+        <br>
+        <label for="user-image">User Image:</label>
+        <input type="file" id="user-image" accept="image/*"> <br>
+        <label for="class">Class:</label>
+        <select id="class">
+            <option value="jss1">JSS 1</option>
+            <option value="jss2">JSS 2</option>
+            <option value="ss1">SS 1</option>
+            <option value="ss2">SS 2</option>
+        </select>
+        <br>
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color">
+        <br>
+        <button id="save-student">Save</button>
+    </div>
+
+    <table id="student-table">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Admission Number</th>
+                <th>Image</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Favorite Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+
+    <div id="user-info" style="display: none;">
+        <h2>User Information</h2>
+        <img id="user-info-image" alt="User Image">
+        <p id="user-name"></p>
+        <p id="user-class"></p>
+        <p id="user-color"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

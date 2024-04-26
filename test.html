@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Show/Hide Content</title>
+<style>
+  .toggle-content {
+    display: none;
+  }
+</style>
+</head>
+<body>
+
+<button onclick="toggleContent()">Toggle Content</button>
+<div id="con" class="toggle-content">
+  <p>This is the content you want to display and hide.</p>
+</div>
+
+<script>
+function toggleContent() {
+  var content = document.getElementById("con");
+  if (content.style.display === "none") {
+    content.style.display = "block";
+  } else {
+    content.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>

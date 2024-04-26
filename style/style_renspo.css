@@ -1,0 +1,426 @@
+/* ====================Responsive======================= */
+/* Tablet and desktop screen wider 786px*/
+@media (min-width: 760px)
+{
+    body
+    {
+        /* background-color: red; */
+    }
+
+  
+    header nav
+    {
+        /* display: none; */
+        justify-content: center;
+    }
+
+    nav .nav-toggle
+    {
+        display: none;
+    }
+
+    header nav li
+    {
+        display: block;
+    }
+
+    .contact-me
+    {
+        margin-top: 30px;
+        padding-left: 20px;
+    }
+
+    .useful-link
+    {
+        padding-left: 20px;
+    }
+}
+
+/* Tablet in land scape */
+@media (min-width: 600px) and (max-width: 767px)
+{
+    body
+    {
+        /* background-color: gray; */
+    }
+
+    header
+    {
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    header nav li
+    {
+        display: none;
+    }
+
+    nav .nav-toggle
+    {
+        display: block;
+    }
+
+    .bg-layer
+    {
+        padding: 0 50px;
+    }
+
+    .bg-layer .hello-text h1
+    {
+        font-size: 2rem;
+    }
+
+    .bg-layer .hello-text h2
+    {
+        font-size: 1.7rem;
+    }
+    .bg-layer .hello-text h4
+    {
+        font-size: 1.3rem;
+    }
+    .bg-layer .hello-text h6
+    {
+        margin-bottom: 10px;
+    }
+
+    .bg-layer .action
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .bg-layer .action button
+    {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 15px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .bg-layer .action #contact_me a
+    {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .bg-layer .action #contact_me
+    {
+        background-color: transparent;
+    }
+
+    .bg-layer .action #read_more
+    {
+        border: 1px solid #fff;
+        background-color: rgba(255, 140, 0, 0.418);
+        color: rgba(2, 10, 85, 0.637);
+    }
+
+    .content .note p
+    {
+        width: 500px;
+        font-size: 1.1rem;
+        background-color: red;
+    }
+
+    .contact-container
+    {
+        /* width: 100%; */
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* gap: 200px; */
+        /* padding-bottom: 0px; */
+    }
+
+    .contact-me
+    {
+        display: flex;
+        border-left: 2px solid #fff;
+    }
+
+    .useful-link
+    {
+        border-left: 2px solid #fff;
+        padding-left: 20px;
+    }
+
+
+}
+
+/* Tablet and phone in poitrate */
+@media (min-width: 480px) and (max-width: 599px) {
+    body {
+        /* background-color: yellow; */
+    }
+
+    header
+    {
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    header nav li
+    {
+        display: none;
+    }
+
+    nav .nav-toggle
+    {
+        display: block;
+        padding: 5px;
+        font-size: 1.2rem;
+        width: 40px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .bg-layer
+    {
+        padding: 0 60px;
+    }
+
+    .bg-layer .hello-text h1
+    {
+        font-size: 2rem;
+    }
+
+    .bg-layer .hello-text h2
+    {
+        font-size: 1.7rem;
+    }
+    .bg-layer .hello-text h4
+    {
+        font-size: 1.3rem;
+    }
+    .bg-layer .hello-text h6
+    {
+        margin-bottom: 10px;
+    }
+
+    .bg-layer .action
+    {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .bg-layer .action button
+    {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 15px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 200px;
+    }
+
+    .bg-layer .action #contact_me a
+    {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .bg-layer .action #contact_me
+    {
+        background-color: transparent;
+    }
+
+    .bg-layer .action #read_more
+    {
+        border: 1px solid #fff;
+        background-color: rgba(255, 140, 0, 0.418);
+        color: rgba(2, 10, 85, 0.637);
+    }
+
+        .container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        text-align: center;
+        padding: 0px 0;
+    }
+
+    .container #lab img
+    {
+        width: 500px;
+    }
+
+    .container .person
+    {
+        display: flex;
+        flex-direction: column-reverse;
+        border-bottom: 2px solid darkolivegreen;
+        border: none;
+        padding: 20px 0px;
+        line-height: normal;
+    }
+
+    .container .person p
+    {
+        font-size: 2rem;
+    }
+
+    .container .person #num
+    {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+
+    .container .person img
+    {
+        border-radius: 50%;
+        border: 2px solid;
+        margin: 20px;
+        width: 100px;
+    }
+
+
+    .content .note p
+    {
+        width: 500px;
+        font-size: 1.1rem;
+    }
+
+    .contact-container
+    {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .feedback input,
+    .feedback textarea
+    {
+        width: 150px;
+    }
+
+    .contact-me
+    {
+        display: flex;
+        border-left: 2px solid #fff;
+    }
+
+    .useful-link
+    {
+        border-left: 2px solid #fff;
+        /* padding-left: 2px; */
+    }
+}
+
+/* responsive small screen */
+@media(max-width: 576px) {
+    body {
+        background-color: turquoise;
+    }
+
+    header
+    {
+        margin: 0 10px;
+        display: flex;
+        justify-content: space-between;
+        /* background-color: red; */
+        padding: 0 20px;
+        margin: 0;
+    }
+
+    nav
+    {
+        background-color: red;
+        display: none;
+    }
+
+    header nav li,
+    herder .action
+    {
+        display: none;
+    }
+
+    nav #nav_btn
+    {
+        display: block;
+    }
+
+    .bg-layer
+    {
+        padding: 0 50px;
+    }
+
+    .bg-layer .hello-text h1
+    {
+        font-size: 1.9rem;
+    }
+    
+    .bg-layer .hello-text h2
+    {
+        font-size: 1.2rem;
+    }
+
+    .bg-layer .hello-text h4
+    {
+        font-size: 2rem;
+    }
+
+    .bg-layer .hello-text h6
+    {
+        font-size: large;
+        margin-bottom: 10px;
+    }
+
+    .bg-layer .action
+    {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .bg-layer .action button
+    {
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 15px;
+        color: #fff;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 170px;
+    }
+
+    .picture-area-project img
+    {
+        width: 150px;
+    }
+
+    .note p
+    {
+        text-align: center;
+        padding: 20px;
+    }
+
+    .contact-container
+    {
+        flex-direction: column;
+        gap: 40px;
+    }
+}

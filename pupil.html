@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>POW - pupils</title>
+        <link rel="stylesheet" href="style/pupil.css">
+        <!-- <link rel="stylesheet" href="style/dashboard.css"> -->
+        <link rel="icon" href="icons/Picture1.png">
+    </head>
+
+    <body>
+        <section class="dialogue-box-container" id="student-form">
+            <div id="dialogueForm">
+                <h2>Add New Pupil</h2>
+                <div class="input-field">
+                    <div class="input-container">
+                        <div class="input-field">
+                            <label for="admission-number">Admission Number:</label>
+                            <input type="number" id="admission-number" min="33065" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" placeholder="Enter student first name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" placeholder="Enter student last name" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="classLevel">Level</label>
+                            <select id="classLevel" onchange="handleClassLevel()">
+                                <option value="">Select level</option>
+                                <option value="JSS-1">JSS 1</option>
+                                <option value="JSS-2">JSS 2</option>
+                                <option value="JSS-3">JSS 3</option>
+                                <option value="SSS-1">SSS 1</option>
+                                <option value="SSS-2">SSS 2</option>
+                                <option value="SSS-3">SSS 3</option>
+                            </select>
+                        </div>
+                        <div class="input-field" id="streamBox">
+                            <label for="stream">Area of study</label>
+                            <select id="stream">
+                                <option value="business">Business</option>
+                                <option value="science">Science</option>
+                                <option value="art">Art</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="email">Email (opitonal)</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="input-field">
+                            <label for="phone">Phone</label>
+                            <input type="number" id="phone">
+                        </div>
+                        <div class="input-field">
+                            <label for="address">Address</label>
+                            <input type="text" id="address">
+                        </div>
+                        <div class="input-field">
+                            <label for="DOB">DOB</label>
+                            <input type="date" id="DOB">
+                        </div>
+                        <div class="input-field">
+                            <label for="user-image">Add img</label>
+                            <input type="file" id="user-image" accept="image/*">
+                        </div>
+                        <div class="input-field">
+                            <label for="color">House color</label>
+                            <div class="color-box">
+                                <input type="color" id="color" onclick="colorHint()">
+                                <div class="color" style="background-color: red"></div>
+                                <div class="color" style="background-color: green"></div>
+                                <div class="color" style="background-color: blue"></div>
+                                <div class="color" style="background-color: yellow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p id="errMsg"></p>
+                    <div class="btn-field">
+                        <button id="save-btn">Save</button>
+                        <button id="cancle-btn">Cancle</button>
+                    </div>
+                </div>
+        </section>
+
+        <!-- Navigation Panel (Block by default) -->
+        <section class="side-nav" id="myNav">
+            <div class="side-links">
+                <a href="dashboard.html" id="logo" onclick="returnMain()" class="element-box">
+                    <img src="icons/logo.png" alt="" width="50">
+                </a>
+                <a href="pupil.html" onclick="pupilAdminPage()" class="element-box" id="active-element">
+                    <img src="icons/student.png" alt="">
+                    <p>Pupil</p>
+                </a>
+                <a href="staff.html" onclick="staffAdminPage()" class="element-box">
+                    <img src="icons/006-teaching.png" alt="">
+                    <p>Staff</p>
+                </a>
+                <a href="classroom.html" class="element-box" id="active-element" onclick="classroomAdminPage()">
+                    <img src="icons/teaching_bd.png" alt="">
+                    <p>Class Room</p>
+                </a>
+                <a href="inbox.html" class="element-box" id="active-element">
+                    <img src="icons/inbox.png" alt="">
+                </a>
+            </div>
+            <div class="lower-area">
+                <a href="register_form.html" target="_blank" class="element-box">
+                    <img src="icons/settings.png" alt="">
+                    <!-- <a href="#">Logout</a> -->
+                </a>
+                <a href="#" class="element-box" style="margin-bottom: 200px;">
+                    <img src="icons/user-2.png" alt="" style="border: 1px solid darkolivegreen; border-radius: 50%;">
+                    <!-- <a href="#">Profile</a> -->
+                </a>
+            </div>
+        </section>
+
+        <main id="main">
+            <section class="page-heading">
+                <h3>Pupil</h3>
+                <div class="selection-heading">
+                    <p>Filter:</p>
+                    <select name="studentCategory" id="studentCategory">
+                        <option value="allPupil">All pupil</option>
+                        <option value="schoolPrefect">School Prefect</option>
+                        <option value="classPrefect">Class Prefect</option>
+                        <option value="normal">Normal</option>
+                    </select>
+                    <button id="addStudentBtn"><span
+                            style="margin-right: 5px; font-weight: bold; font-size: large;">+</span>Add pupil</button>
+                </div>
+            </section>
+            <section class="pupil-table">
+                <div class="pupil-table-head">
+                    <button type="submit" id="searchIcon">Search</button>
+                    <!-- <img src="icons/search.png" alt="" > -->
+                    <input type="search" name="searchPupil" id="searchPupil"
+                        placeholder="Search student name or id number">
+                </div>
+                <div class="table-container">
+                    <table id="student-table">
+                        <thead>
+                            <tr style="background-color: darkolivegreen; color: #eee;">
+                                <!-- <th >No.</th> -->
+                                <th style="padding: 10px;">Admission Number</th>
+                                <th>Name</th>
+                                <th>Level</th>
+                                <th>House Color</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                    <div class="pupil-panel-container">
+                        <div class="profile-area">
+                            <div class="profile-head">
+                                <img src="icons/icon_group.png" alt="" width="100" id="user-info-image">
+                                <div class="click-user-name">
+                                    <h3 id="user-first-name"></h3>
+                                    <h3 id="user-last-name"></h3>
+                                </div>
+                                <!-- <p id="category"></p> -->
+                                <p id="aos"></p>
+                            </div>
+                            <div class="other-info-container" id="other-info-container">
+                                <div class="other-info-box">
+                                    <p>Email:</p>
+                                    <p id="user-email"></p>
+                                </div>
+                                <div class="other-info-box">
+                                    <p>Phone:</p>
+                                    <p id="user-phone"></p>
+                                </div>
+                                <div class="other-info-box">
+                                    <p>Address:</p>
+                                    <p id="user-address"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+
+        <!-- <script src="script/dashboard.js"></script> -->
+        <script>
+            function colorHint() {
+                // alert("To use this click on the pencil icon and select the color you want to input")
+            }
+
+        </script>
+        <script src="script/pupil.js">
+        </script>
+    </body>
+
+</html>

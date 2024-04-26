@@ -1,0 +1,36 @@
+/* ====================Responsive======================= */
+/* Tablet and desktop screen wider 786px*/
+@media (min-width: 760px)
+{
+	body
+	{
+		background-color: red;
+	}
+}
+
+/* Tablet in land scape */
+@media (min-width: 600px) and (max-width: 767px)
+{
+    body
+    {
+        background-color: gray;
+	}
+}
+
+/* Tablet and phone in poitrate */
+@media (min-width: 480px) and (max-width: 599px)
+{
+	body
+	{
+		background-color: yellow;
+	}
+}
+
+/* responsive small screen */
+@media(max-width: 576px)
+{
+	    body
+        {
+            /* background-color: turquoise; */
+        }
+}

@@ -1,0 +1,70 @@
+/* 2. **Organize content logically:**
+- Use semantic HTML tags (e.g., `<h1>` for headings, `<p>` for paragraphs) to structure your content meaningfully. This aids accessibility and responsiveness.
+
+**CSS Styling:**
+
+1. **Base styles:**
+- Reset default styles with a CSS reset to create a consistent foundation. Consider frameworks like Normalize.css or using a starter template.
+2. **Fluid units:**
+- Use relative units like `em`, `rem`, or `vw` instead of fixed pixel values for flexible sizing across devices.
+3. **Media queries:**
+- Define different styles for different screen widths using media queries. Leverage `min-width` and `max-width` to target specific device ranges.
+```css */
+@media (min-width: 1024px) {
+  /* Styles for larger screens (laptops, desktops) */
+    header {
+        text-align: center;
+    }
+  /* main { display: flex; } */
+}
+
+/* **************************************************** */
+  /* Styles for tablets */
+/* **************************************************** */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    main {
+        /* background-color: yellow; */
+        padding: 20px;
+    }
+
+    .school-detail {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+    }
+
+    .extra {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        margin: 50px 0;
+    }
+}
+
+/* **************************************************** */
+  /* Styles for small screens (phones) */
+/* **************************************************** */
+@media (max-width: 768px) {
+  /* header { font-size: 1.2em; } */
+    /* .side-nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+    } */
+
+    .school-detail {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        width: 100%;
+    }
+
+    .extra {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+        margin: 50px 0;
+    }
+
+}

@@ -1,0 +1,85 @@
+/* ====================Responsive======================= */
+/* Tablet and desktop screen wider 786px*/
+@media (min-width: 760px) {
+    body {
+        /* background-color: red; */
+    }
+}
+
+/* Tablet in land scape */
+@media (min-width: 600px) and (max-width: 767px)
+{
+    body
+    {
+        /* background-color: gray; */
+	}
+
+    form
+    {
+        padding: 20px 50px;
+    }
+
+    .description  textarea
+    {
+        width: 95%;
+        border-radius: 5px;
+    }
+
+}
+
+/* Tablet and phone in poitrate */
+@media (min-width: 480px) and (max-width: 599px)
+{
+	body
+	{
+		/* background-color: yellow; */
+	}
+
+    form
+    {
+        padding: 20px 50px;
+    }
+
+    .description  textarea
+    {
+        width: 95%;
+        border-radius: 5px;
+    }
+}
+
+/* responsive small screen */
+@media(max-width: 576px)
+{
+    body
+    {
+        /* background-color: turquoise; */
+    }
+
+    form
+    {
+        padding: 20px 10px;
+    }
+
+    .preview-container
+    {
+        width: 100px;
+        height: 140px;
+    }
+    .input_container
+    {
+        padding: 20px 0;
+    }
+    .input_container .input_field,
+    .input_container .test_area
+    {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .description  textarea
+    {
+        width: 95%;
+        border-radius: 5px;
+    }
+}
